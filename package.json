@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node esbuild.config.mjs",
+    "demo": "npm run build && npx http-server ./public",
     "test": "jest",
     "lint": "eslint 'src/**/*.ts'"
   },
@@ -17,6 +18,7 @@
     "@types/node": "^22.5.2",
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
+    "esbuild": "^0.23.1",
     "eslint": "^9.9.1",
     "globals": "^15.9.0",
     "jest": "^29.7.0",
